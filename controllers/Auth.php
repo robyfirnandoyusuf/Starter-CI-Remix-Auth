@@ -54,7 +54,7 @@ class Auth extends CI_Controller {
 
 		
 		$res = "";
-        $dataLogin = Authmodel::get_password("admin@admin.com");
+        $dataLogin = Authmodel::get_password($email);
 		if ($dataLogin) 
 		{
 			switch ($dataLogin) 
