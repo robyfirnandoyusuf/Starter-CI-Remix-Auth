@@ -42,12 +42,7 @@ class Auth extends CI_Controller {
 				}
 
 			 }
-			// else{
-			// 	$data['message'] = $user;
-			// 	$data['login_url'] = $this->googleplus->loginURL();
-			// 	$data['success_message'] = $this->session->flashdata('success_message');
-			// 	$this->template->load( 'template-auth', 'auth/login', $data);
-			// }
+			
 		}
 			
 	}
@@ -55,10 +50,7 @@ class Auth extends CI_Controller {
 	public function get_login($email = null, $password = null)
 	{
 
-		// $options = [
-		//     'cost' => 12,
-		// ];
-		// echo password_hash("admin@admin.com", PASSWORD_BCRYPT, $options);
+		
 		$res = "";
         $dataLogin = Authmodel::get_password("admin@admin.com");
 		if ($dataLogin) 
