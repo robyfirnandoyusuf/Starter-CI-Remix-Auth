@@ -38,7 +38,7 @@ class Auth extends CI_Controller {
 				if ($akses == 1) {
 					redirect("Admin/dashboard");
 				}else if ($akses == 2) {
-					redirect("costumer/dashboardcostumer");
+					echo 'Ini Level User';
 				}
 
 			 }
