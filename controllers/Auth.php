@@ -25,7 +25,7 @@ class Auth extends CI_Controller {
 		} 
 		else 
 		{
-			$user = $this->get_login($this->input->post('email'), $this->input->post('password'));
+			$user = $this->get_login($this->input->post('username'), $this->input->post('password'));
 			if(is_array($user))
 			{
 				$this->session->set_userdata("back_email", $user[0]['email']);
@@ -41,6 +41,8 @@ class Auth extends CI_Controller {
 					echo 'Ini Level User';
 				}
 
+			 }else{
+			 	redirect('auth','refresh');
 			 }
 			
 		}
